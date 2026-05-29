@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Developer Survey App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Developer Survey App</h1>
+    <p class="subtitle">Tell us about your developer journey 🚀</p>
+
+    <form id="surveyForm">
+
+        <label>Full Name</label>
+        <input type="text" id="name" required>
+
+        <label>Experience Level</label>
+        <select id="level" required>
+            <option value="">Select</option>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+        </select>
+
+        <label>Technologies You Know</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" value="HTML"> HTML</label>
+            <label><input type="checkbox" value="CSS"> CSS</label>
+            <label><input type="checkbox" value="JavaScript"> JavaScript</label>
+            <label><input type="checkbox" value="React"> React</label>
+            <label><input type="checkbox" value="Python"> Python</label>
+        </div>
+
+        <label>Favorite Area</label>
+        <div class="radio-group">
+            <label><input type="radio" name="area" value="Frontend Development"> Frontend</label>
+            <label><input type="radio" name="area" value="Backend Development"> Backend</label>
+            <label><input type="radio" name="area" value="UI/UX Design"> UI/UX</label>
+        </div>
+
+        <label>What are you currently learning?</label>
+        <textarea id="learning" required></textarea>
+
+        <label>Career Goal</label>
+        <textarea id="goal" required></textarea>
+
+        <button type="submit">Submit Survey</button>
+    </form>
+
+    <p id="msg"></p>
+
+    <button onclick="viewResponses()" class="view-btn">
+        View Responses
+    </button>
+
+    <div id="responses" class="responses"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
